@@ -18,3 +18,6 @@ What is node js?
     node js .. enabled JS to run on our machines( console based applications!) (calculator make it in JS.. node js will support you..)
 
 node js will PLAY A VERY IMPORTANT ROLE IN DEVELOPING REACT APPLICATION... :) 
+
+Interpreted languages... Line by line execution...JavaScript! Python...
+Compiled Languages:... they convert the whole program and then execute.. if there are any errors, it won't exeucte unless we remove the errors....C, C#, Java, ...You will never be able to run a program unless you remove all errors...
