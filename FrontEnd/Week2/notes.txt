@@ -1,0 +1,4 @@
+<h1>First heading</h1>
+    <h1 id="s2">Second &nbsp; &nbsp; &nbsp; heading</h1>
+    &lt;html&gt; &lt;head&gt;&lt;/head&gt; &lt;/html&gt; &copy;&reg; &euro;
+    &trade;
