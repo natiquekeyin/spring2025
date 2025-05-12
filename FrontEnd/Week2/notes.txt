@@ -63,10 +63,15 @@
     <form></form>...<input/>... other markup
 
     Attributes of form element:
-        i) action: what we want to do with data when the form is submitted..you want to send data to another page... hyou want to email the data to your email address, or you want to read the data in a script to do some action on the page.....
+        i) action: what we want to do with data when the form is submitted..you want to send data to another page... hyou want to email the data to your email address, or you want to read the data in a script to do some action on the page.....on Google... action = "/search" method = "GET"
         ii) method: can be either "get" or "post". 
         
         "get" method sends data as the part of the URL...
         "post" method sends data as the part of the body of the page....
 
-We will start from form inputs next week!
+    <input id="xyz" name="xyz"/>
+     id is for accessing this element in our scripts (CSS, JS)
+     name is used for accessing the value of the control while we receive data 
+
+
+     given-name=Noman&email=natique%40conestogac.on.ca&date=2025-05-14&position=IT%20+Technician&upload=Course+Outline+Front-End+Development.docx&comments=Thanks+for+giving+me+this...
