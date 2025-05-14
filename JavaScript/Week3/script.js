@@ -116,15 +116,93 @@ undefined+undefined = NaN;
 
 // arr.shift();
 // console.log(arr);
-// arr.shift();
-// console.log(arr);
+// // arr.shift();
+// // console.log(arr);
 
-let arr = [1, 2, 4];
+// let arr = [1, 2, 4];
 
-console.log(arr.concat([6, 7], 9)); //concat does not update the original array
-console.log(arr.includes(4));
-console.log(arr.indexOf(4));
-console.log(arr.join("-"));
+// console.log(arr.concat([6, 7], 9)); //concat does not update the original array
+// console.log(arr.includes(4));
+// console.log(arr.indexOf(4));
+// console.log(arr.join("-"));
 
 // split( ) converts a string to Array by splitting with give character...
 // join() converts an array to a string by using the give character..
+
+// Methods to Iterate accross the elements in an array...
+
+let list = [4, 2, 5, 7, 8];
+// create a new array/list... that adds 3 to each item in the list
+
+// let listCopy = [];
+
+// Method 1: for loop
+
+// for (let i = 0; i < list.length; i++) {
+//   let element = list[i];
+//   element += 3;
+//   listCopy.push(element);
+// }
+// Method 2: forEach()
+// list.forEach(function (element) {
+//   listCopy.push(element + 3);
+// });
+
+// Method 3: map() function: map() applies the given function (in parameters) to each item in the collection and returns a new array ....
+
+// let listCopy = list.map(function (element) {
+//   return element + 3;
+// });
+
+// // A method for filtering elements from array: filter() .. creates and returns a new array containing those elements that match a condition you define in the function....
+
+// let filterList = list.filter(function (element) {
+//   return element > 4;
+// });
+
+// // A mthod that returns true if all of the elements in the array meet a condition you define in the function...
+
+// console.log(
+//   list.every(function (element) {
+//     return element > 0;
+//   })
+// );
+
+// console.log(list);
+// console.log(listCopy);
+// console.log(filterList);
+
+// let listCopy = list.map((element) => element + 3);
+
+// console.log(list);
+// console.log(listCopy);
+
+// Iterating over String, Array and other collections...
+
+let s = "Hello Keyin College";
+
+// for (let i = 0; i < s.length; i++) {
+//   let char = s.charAt(i);
+//   console.log(i, char);
+// }
+
+// let arr = [10, 20, 30, 40];
+// // for (let i = 0; i < arr.length; i++) {
+// //   let element = arr[i];
+// //   console.log(i, element);
+// // }
+
+// //  for of
+// for (let char of s) {
+//   console.log(char);
+// }
+
+// for (let element of arr) {
+//   console.log(element);
+// }
+
+// WEEK4
+// colour = black... color ...
+// color... colour...
+// Regular Expression: universal type of language that allows programmmers to define patterns that can recognize some strings on the basis of some conditions...
+// colou?r.. Regular Expression -- color... colour
