@@ -162,11 +162,7 @@ let list = [4, 2, 5, 7, 8];
 
 // // A mthod that returns true if all of the elements in the array meet a condition you define in the function...
 
-// console.log(
-//   list.every(function (element) {
-//     return element > 0;
-//   })
-// );
+console.log(list.every((element) => element > 0));
 
 // console.log(list);
 // console.log(listCopy);
