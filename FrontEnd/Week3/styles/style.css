@@ -1,0 +1,17 @@
+html,
+body {
+  font-size: 16px;
+}
+
+p {
+  font-size: 2rem;
+}
+
+#section1 {
+  background-color: beige;
+  font-size: 2rem;
+  /* div - 32px 
+  p - 2 X 32px(parent's size) = 64
+  */
+  /* rem is recommended for this reason.. rem takes the size from root element ...not immediate parent.... */
+}
