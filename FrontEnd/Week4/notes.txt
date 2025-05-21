@@ -1,0 +1,7 @@
+Flexbox model is one-dimentional! Either make rows or columns..
+
+CSS GRID:
+    That enables both two dimensional flexibility...
+    i)Grid-container
+    ii) Grid-items
+    iii) Gaps
