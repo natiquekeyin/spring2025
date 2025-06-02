@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", function () {
   //     cat.src = nextImageUrl();
   //   }, 2000);
 
-  //   this.setInterval(function () {
-  //     cat.src = nextImageUrl();
-  //   }, 1000);
+  this.setInterval(function () {
+    cat.src = nextImageUrl();
+  }, 1000);
 });
