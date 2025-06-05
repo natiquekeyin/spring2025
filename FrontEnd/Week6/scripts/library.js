@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", function () {
     } else {
       let row = document.createElement("tr");
 
-      row.innerHTML = `<td>${t}</td><td>${i}</td><td>${a}</td><td class="delete">X</td>`;
+      row.innerHTML = `<td>${t}</td><td>${i}</td><td>${a}</td><td class="delete" style="cursor:pointer">X</td>`;
 
       document.querySelector("#list").appendChild(row);
       showAlert("Book Succesfully added", "success");
@@ -45,5 +45,19 @@ window.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       document.querySelector("#box").remove();
     }, 3000);
+  }
+
+  this.document.querySelector("#area").addEventListener("click", handleDelete);
+
+  function handleDelete(evt) {
+    deleteBook(evt.target);
+  }
+  function deleteBook(elemToDelete) {
+    if (elemToDelete.className === "delete") {
+      elemToDelete.parentElement.remove();
+      showAlert("Book succesully removed", "success");
+    } else {
+      showAlert("Wrong area - click on X", "error");
+    }
   }
 });

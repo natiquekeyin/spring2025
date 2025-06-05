@@ -183,3 +183,5 @@ function Car(mk, md, yr) {
 
 let car1 = new Car("Honda", "Odyssey", 2024);
 console.log(car1.getCarInfo());
+
+// class & objects concept.. in JavaScript!
