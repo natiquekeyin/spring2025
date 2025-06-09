@@ -15,3 +15,10 @@ Explicit method.. NOT CONSTRUCTOR..
    getBook() {
       return `Book Title:${this.title} Book Author:${this.author} Book ISBN:${this.isbn}`;
     }
+
+
+
+        Book.testMethod(); //class level method?
+    // Math.round()... round is a static method in side Math class, and we call it without crreatin object of Math class..
+
+    If testMthod is defined as static..
