@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", function () {
         row.innerHTML = `<td>${book.title}</td><td>${book.isbn}</td><td>${book.author}</td><td class="delete" style="cursor:pointer">X</td>`;
 
         document.querySelector("#list").appendChild(row);
-        this.showAlert("Book Succesfully added", "success");
+        // this.showAlert("Book Succesfully added", "success");
         this.clearFields();
       }
     }
@@ -46,6 +46,10 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     deleteBook(elemToDelete) {
       if (elemToDelete.className === "delete") {
+        let isbn =
+          elemToDelete.previousElementSibling.previousElementSibling
+            .textContent;
+        Store.removeBook(isbn);
         elemToDelete.parentElement.remove();
         this.showAlert("Book succesully removed", "success");
       } else {
@@ -88,8 +92,19 @@ window.addEventListener("DOMContentLoaded", function () {
       }
       return books;
     }
-    static displayBooks() {}
-    static removeBook() {}
+    static displayBooks() {
+      let books = Store.getBooks();
+      //   each book from books should be displayed on our web page...infact inside the table.. tbody..
+      books.forEach((book) => {
+        let objBook = new Book();
+        objBook.addBookToList(book);
+      });
+    }
+    static removeBook(isbn) {
+      let books = Store.getBooks();
+      books = books.filter((book) => book.isbn !== isbn);
+      localStorage.setItem("books", JSON.stringify(books));
+    }
   }
 
   //   grabbing the form and attaching an event with that...
@@ -106,6 +121,7 @@ window.addEventListener("DOMContentLoaded", function () {
     // console.log(book);
 
     book.addBookToList(book); //call addBookToList method of Book class.. and it will create a row on our page....
+    book.showAlert("Book Successfully added", "success");
     Store.addBook(book);
 
     evt.preventDefault();
@@ -117,4 +133,6 @@ window.addEventListener("DOMContentLoaded", function () {
     let book = new Book();
     book.deleteBook(evt.target);
   }
+
+  Store.displayBooks();
 });
