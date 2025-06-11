@@ -83,12 +83,26 @@ window.addEventListener("DOMContentLoaded", function () {
   function loadAPI() {
     const xhr = new XMLHttpRequest();
 
-    xhr.open("GET", "https://api.github.com/user");
+    xhr.open("GET", "https://jsonplaceholder.typicode.com/todos");
 
     xhr.onload = function () {
       if (this.status === 200) {
         let users = JSON.parse(this.responseText);
-        console.log(users);
+        users.forEach((user) => {
+          // document.querySelector("#output").innerHTML += `<div class="profile">
+          // <h1>${user.login}</h1>
+          // <h1>${user.id}</h1>
+          // <img src = "${user.avatar_url}" alt="profile" class="pic"/> <br/>
+          // <a href="${user.url}">More...</a>
+          // </div>`;
+
+          document.querySelector("#output").innerHTML += `<div class="profile">
+          <h1>${user.userId}</h1>
+          <h1>${user.title}</h1>
+          <h1>${user.id}</h1>
+        <h1>${user.completed}</h1>
+          </div>`;
+        });
       }
     };
 
