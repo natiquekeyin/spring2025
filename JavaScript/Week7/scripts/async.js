@@ -37,3 +37,5 @@
 // loadText();
 
 // Convert our fetch.html and fetch.js into ... async/await functions and do the same functionality???
+
+// aysnc.js...
