@@ -6,6 +6,10 @@ const History = ({ country, city, population }) => {
 
   //   let { country, city } = props;
 
+  const onClickH = () => {
+    console.log("Click of History");
+  };
+
   return (
     <>
       <h3>History - {country}</h3>
@@ -15,9 +19,9 @@ const History = ({ country, city, population }) => {
       </p>
       {/* <button>Play</button>
       <button>Stop</button> */}
-      <Button text="Play" color="green" />
-      <Button text="Stop" color="red" />
-      <Button text="Pause" color="gray" />
+      <Button text="Play" color="green" onClick={onClickH} />
+      <Button text="Stop" color="red" onClick={onClickH} />
+      <Button text="Pause" color="gray" onClick={onClickH} />
     </>
   );
 };

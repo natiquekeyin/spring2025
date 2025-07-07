@@ -71,3 +71,12 @@ button:focus-visible {
   color: green;
   background-color: aliceblue;
 }
+
+.profile {
+  width: 300px;
+  border: 1px solid green;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
