@@ -85,3 +85,7 @@ header {
   flex: 2;
   height: 20px;
 }
+
+footer {
+  text-align: center;
+}
