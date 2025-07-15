@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div>
-      <h4>Version 1.0.0</h4>
+    <div style={{ textAlign: "center", marginBottom: "50px" }}>
+      <h2>Version 1.0.0</h2>
       {/* <a href="/">Go Back!!</a> */}
 
-      <Link to="/">Go Back!!</Link>
+      <Link to="/" style={{ color: "gray", textDecoration: "none" }}>
+        Go Back!!
+      </Link>
     </div>
   );
 };

@@ -11,9 +11,14 @@ const Task = ({ task, onDelete, onToggle }) => {
         {task.text}
         <FaTimes style={{ color: "red" }} onClick={() => onDelete(task.id)} />
       </h3>
-      <p>{task.day}</p>
+
       <p>
-        <Link to={`/task/${task.id}`}>View Details</Link>
+        <Link
+          to={`/task/${task.id}`}
+          style={{ color: "gray", fontSize: "10px", textDecoration: "none" }}
+        >
+          View Details
+        </Link>
       </p>
     </div>
   );
