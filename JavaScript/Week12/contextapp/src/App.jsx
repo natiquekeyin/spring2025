@@ -2,22 +2,23 @@ import "./App.css";
 import Counter from "./components/Counter";
 import { CounterContext } from "./context/Counter";
 import { useContext } from "react";
+import Item from "./components/Item";
 import Cart from "./components/Cart";
-import Items from "./components/Items";
 
 function App() {
-  // const counterState = useContext(CounterContext);
-  // console.log("context", counterState);
-
+  const counterState = useContext(CounterContext);
+  console.log("context", counterState);
   return (
     <>
-      <h1>Context Application</h1>
-      {/* <h3>Count value is: {2 + 2}</h3>
-      <Counter /> */}
-      <Items name="Mobile Phone" price={2000} />
-      <Items name="Mobile Phone" price={2000} />
-      <Items name="Mobile Phone" price={2000} />
-
+      <h2>Context Application</h2>
+      <h3>Count value is {counterState.count}</h3>
+      <Counter />
+      <Counter />
+      <Counter />
+      <Counter />
+      <Item name="Mobile phone" price={2000} />
+      <Item name="Hard drive" price={1000} />
+      <Item name="Keyboard" price={500} />
       <Cart />
     </>
   );

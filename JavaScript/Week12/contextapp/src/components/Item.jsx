@@ -1,9 +1,9 @@
 import { CartContext } from "../context/Cart";
 import { useContext } from "react";
 
-const Items = ({ name, price }) => {
+const Item = ({ name, price }) => {
   const cart = useContext(CartContext);
-
+  console.log("Cart", cart);
   return (
     <div>
       <h4>{name}</h4>
@@ -18,5 +18,4 @@ const Items = ({ name, price }) => {
     </div>
   );
 };
-
-export default Items;
+export default Item;
