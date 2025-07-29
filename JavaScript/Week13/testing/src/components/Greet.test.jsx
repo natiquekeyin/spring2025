@@ -6,7 +6,7 @@ import "@testing-library/jest-dom/vitest";
 describe("Greet", () => {
   test("Greet renders correclty", () => {
     render(<Greet />);
-    const heading = screen.getByText(/hello/i);
+    const heading = screen.getByText((content) => content.endsWith("d"));
     expect(heading).toBeInTheDocument();
   });
 });
